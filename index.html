@@ -7,7 +7,12 @@
 <body>
 
 	<h1>Memorama Facebook </h1>
+	<fb:login-button 
+	scope="public_profile,email"
+	onlogin="checkLoginState();">
+	</fb:login-button>
 	<script>
+ 
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '{your-app-id}',
@@ -26,12 +31,7 @@
      js = d.createElement(s); js.id = id;
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-   
-   <fb:login-button 
-  scope="public_profile,email"
-  onlogin="checkLoginState();">
-</fb:login-button>
+   }(document, 'script', 'facebook-jssdk')); 
 </script>
 
 </body>
