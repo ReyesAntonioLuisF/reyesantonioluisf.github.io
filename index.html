@@ -7,56 +7,47 @@
 <body>
 <script>
 
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    if (response.status === 'connected') {
-      testAPI();
-    } else {
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+    window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '905114382892576',
+          xfbml      : true,
+          version    : 'v2.12'
+        });
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    };
+
+    (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    function statusChangeCallback(response){
+        if(response.status==='connected'){
+            console.log("Usuario autorizado");
+            requestAPI();
+        }else{
+            console.log("Usuario no autorizado");
+        }
     }
-  }
 
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+    function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    }
 
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '534676620250117',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.12'
-    });
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-  function testAPI() {
-		var btn= document.getElementById('btnInicio');
-		var btnS= document.getElementById('btnSalir');
-		btn.style.display = 'none';
-		btnS.style.display = 'block';
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
+    function requestAPI(){
+      FB.api('me?fields=id,name,friends{name,picture}',function(response){
+          if(response){
+            console.log(response);
+          }
+      })
+    }
 	function salir(){
 		FB.logout(function(response) {
 console.log("sesión cerrada");
