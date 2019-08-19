@@ -1,70 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Facebook Login JavaScript Example</title>
-<meta charset="UTF-8">
-</head>
-<body>
-<script>
-
-    window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '905114382892576',
-          xfbml      : true,
-          version    : 'v2.12'
-        });
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-    };
-
-    (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    function statusChangeCallback(response){
-        if(response.status==='connected'){
-            console.log("Usuario autorizado");
-            requestAPI();
-        }else{
-            console.log("Usuario no autorizado");
-        }
-    }
-
-    function checkLoginState() {
-      FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-      });
-    }
-
-    function requestAPI(){
-      FB.api('me?fields=id,name,friends{name,picture}',function(response){
-          if(response){
-            console.log(response);
-          }
-      })
-    }
-	function salir(){
-		FB.logout(function(response) {
-console.log("sesión cerrada");
-var btn= document.getElementById('btnInicio');
-var btnS= document.getElementById('btnSalir');
-btn.style.display = 'block';
-btnS.style.display = 'none';
-});
-	}
-</script>
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" id="btnInicio">
-</fb:login-button>
-
-
-<button onclick="salir()" display="none" id="btnSalir">Log Out</button>
-<div id="status">
-</div>
-
-</body>
+ <head>
+ <title>Facebook Login JavaScript Example</title>
+ <meta charset="UTF-8">
+ </head> 
+ <body>
+	 <h1> Pagina principal de Luis Fernando Reyes Antonio</h1>
+ </body>
 </html>
