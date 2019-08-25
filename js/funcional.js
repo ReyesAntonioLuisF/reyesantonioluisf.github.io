@@ -43,5 +43,5 @@ function sendMessageToUnity(message) {
 }
 
 function sendPing(cadena) {
-  sendMessageToUnity(cadena);
+  sendMessageToUnity("ping");
 }
