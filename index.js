@@ -12,20 +12,20 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 function insertarTask() {
-    let id = 1
-    let nombre: "Antena Plana Para Interiores Master TVANTFLATHD"
-    let height: 27
-    let length: 50
-    let weight: 430
-    let foto: "https://elektraqapre.vteximg.com.br/arquivos/ids/157064-292-292/177602.jpg?v=636568020153600000"
-    let price: "$199.00"
-    let descripcion: "Antena Plana Para Interiores Master TVANTFLATHD"
-    let disponible: true;
+    let id = 1;
+    let nombre= "Antena Plana Para Interiores Master TVANTFLATHD"
+    let height= 27
+    let length= 50
+    let weight= 430
+    let foto= "https://elektraqapre.vteximg.com.br/arquivos/ids/157064-292-292/177602.jpg?v=636568020153600000"
+    let price= "$199.00"
+    let descripcion= "Antena Plana Para Interiores Master TVANTFLATHD"
+    let disponible= true;
 
     let arrayData = {nombre: nombre, alto: height, largo: length, ancho: weight, foto: foto, precio: price, descripcion: descripcion, disponibilidad: disponible};
     var task = firebase.database().ref("task/"+id);
     task.set(arrayData)
-    
+
 }
 
 var userAgent = navigator.userAgent || navigator.vendor || window.opera;
