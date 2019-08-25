@@ -11,7 +11,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore();
-const decRef =  firestore.doc()
+const decRef =  firestore.doc("/samples/objetos")
 
 function insertar(){
     docRef.set({
