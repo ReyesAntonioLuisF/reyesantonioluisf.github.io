@@ -3,10 +3,38 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 20pt;
+            background-color: #5179c4
+        }
+
+        .myButton {
+            background-color: #2e466e;
+            -moz-border-radius: 17px;
+            -webkit-border-radius: 17px;
+            border-radius: 17px;
+            border: 1px solid #1f2f47;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 15px;
+            padding: 16px 26px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #263666;
+        }
+
+        p,
+        h3 {
+            color: #FFF
+        }
+    </style>
 </head>
 
 <body>
-    <a class="myButton" onclick="sendPing()" style="width: 50px; background-color:#2e466e;">Click here to send "Ping" to Unity</a>
+    <a class="myButton" onclick="sendPing()">Click here to send "Ping" to
+        Unity</a>
     <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </body>
