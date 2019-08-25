@@ -39,7 +39,9 @@ function sendMessageToUnity(message) {
     appendIframeWithURL('inappbrowserbridge://' + message);
   } else if (isAndroid()){
     UnityInAppBrowser.sendMessageFromJS(message);
+    console.log("in android");
   }
+
 }
 
 function sendPing(cadena) {
