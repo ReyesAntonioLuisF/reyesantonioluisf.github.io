@@ -39,7 +39,43 @@
     <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
     <script defer src="./init-firebase.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+
+    <!-- script type="text/javascript" src="index.js"></script> -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCs7PUMT3SrA5fHc8h6KyS0Wv_cqrHVlmc",
+            authDomain: "arelektra-cb680.firebaseapp.com",
+            databaseURL: "https://arelektra-cb680.firebaseio.com",
+            projectId: "arelektra-cb680",
+            storageBucket: "",
+            messagingSenderId: "335620122141",
+            appId: "1:335620122141:web:593b4cbd15e04414"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        console.log(firebase);
+
+        var firestore = firebase.firestore();
+        const decRef = firestore.doc("/samples/objetos")
+
+        function insertar() {
+            docRef.set({
+                id: 1,
+                nombre: "Antena Plana Para Interiores Master TVANTFLATHD",
+                height: 27,
+                length: 50,
+                weight: 430,
+                price: "$199.00",
+                disponible: true
+            })
+                .then(() => {
+                    console.log("Guardado")
+                })
+                .catch(() => {
+                    console.log("hubo error")
+                })
+        }
+    </script>
 </body>
 
 </html>
