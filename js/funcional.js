@@ -43,7 +43,7 @@ function sendMessageToUnity(message) {
 }
 
 function sendPing(cadena) {
-  sendMessageToUnity(cadena);
+  sendMessageToUnity('ping');
   console.log("va enviar cadena");
 
 }
