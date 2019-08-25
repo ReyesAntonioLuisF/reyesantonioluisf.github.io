@@ -42,11 +42,12 @@ function sendMessageToUnity(message) {
     console.log("in android");
   }
   UnityInAppBrowser.sendMessageFromJS(message);
-console.log("funcion send message");
+
+
 }
 
 function sendPing(cadena) {
-  sendMessageToUnity('ping');
-  console.log("va enviar cadena");
+  sendMessageToUnity(cadena);
+ 
 
 }
