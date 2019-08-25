@@ -10,9 +10,28 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+var firestore = firebase.firestore();
+const decRef =  firestore.doc()
 
-function insertarTask() {
-    let id = 1;
+function insertar(){
+    docRef.set({
+        id: 1,
+        nombre: "Antena Plana Para Interiores Master TVANTFLATHD",
+        height: 27,
+        length: 50,
+        weight: 430,
+        price: "$199.00",
+        disponible: true
+    })
+        .then(() => {
+            console.log("Guardado")
+        })
+        .catch( () => {
+            console.log("hubo error")
+        })
+}
+/*function insertarTask() {
+    let 
     let nombre= "Antena Plana Para Interiores Master TVANTFLATHD"
     let height= 27
     let length= 50
@@ -25,7 +44,7 @@ function insertarTask() {
     let arrayData = {nombre: nombre, alto: height, largo: length, ancho: weight, foto: foto, precio: price, descripcion: descripcion, disponibilidad: disponible};
     var task = firebase.database().ref("task/"+id);
     task.set(arrayData)
-}
+}*/
 
 var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
