@@ -25,7 +25,6 @@ function insertarTask() {
     let arrayData = {nombre: nombre, alto: height, largo: length, ancho: weight, foto: foto, precio: price, descripcion: descripcion, disponibilidad: disponible};
     var task = firebase.database().ref("task/"+id);
     task.set(arrayData)
-
 }
 
 var userAgent = navigator.userAgent || navigator.vendor || window.opera;
