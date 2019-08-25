@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: 4cfb098b4720bbd44ae3819b98ac850b
+timeCreated: 1552509749
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: achse_low
+    100002: angle_low
+    100004: base_low
+    100006: baseblock_low
+    100008: basebottom_low
+    100010: connector_low
+    100012: face_low
+    100014: glas_low
+    100016: gravel
+    100018: ground
+    100020: legs_low
+    100022: motor_low
+    100024: NurbsPath.002
+    100026: pipe_low
+    100028: plate_low
+    100030: ring_low
+    100032: //RootNode
+    400000: achse_low
+    400002: angle_low
+    400004: base_low
+    400006: baseblock_low
+    400008: basebottom_low
+    400010: connector_low
+    400012: face_low
+    400014: glas_low
+    400016: gravel
+    400018: ground
+    400020: legs_low
+    400022: motor_low
+    400024: NurbsPath.002
+    400026: pipe_low
+    400028: plate_low
+    400030: ring_low
+    400032: //RootNode
+    2300000: achse_low
+    2300002: angle_low
+    2300004: base_low
+    2300006: baseblock_low
+    2300008: basebottom_low
+    2300010: connector_low
+    2300012: face_low
+    2300014: glas_low
+    2300016: gravel
+    2300018: ground
+    2300020: legs_low
+    2300022: motor_low
+    2300024: NurbsPath.002
+    2300026: pipe_low
+    2300028: plate_low
+    2300030: ring_low
+    3300000: achse_low
+    3300002: angle_low
+    3300004: base_low
+    3300006: baseblock_low
+    3300008: basebottom_low
+    3300010: connector_low
+    3300012: face_low
+    3300014: glas_low
+    3300016: gravel
+    3300018: ground
+    3300020: legs_low
+    3300022: motor_low
+    3300024: NurbsPath.002
+    3300026: pipe_low
+    3300028: plate_low
+    3300030: ring_low
+    4300000: NurbsPath.002
+    4300002: connector_low
+    4300004: achse_low
+    4300006: angle_low
+    4300008: motor_low
+    4300010: plate_low
+    4300012: ring_low
+    4300014: face_low
+    4300016: baseblock_low
+    4300018: pipe_low
+    4300020: base_low
+    4300022: ground
+    4300024: basebottom_low
+    4300026: legs_low
+    4300028: glas_low
+    4300030: gravel
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
