@@ -1,6 +1,5 @@
 // Your web app's Firebase configuration
-import * as firebase from 'firebase';
-import 'firebase/firestore';
+
 
 var firebaseConfig = {
     apiKey: "AIzaSyCs7PUMT3SrA5fHc8h6KyS0Wv_cqrHVlmc",
@@ -13,6 +12,8 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+console.log(firebase);
+
 var firestore = firebase.firestore();
 const decRef =  firestore.doc("/samples/objetos")
 
