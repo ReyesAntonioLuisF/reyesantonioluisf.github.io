@@ -38,9 +38,10 @@ function sendMessageToUnity(message) {
   if (isIOS()) {
     appendIframeWithURL('inappbrowserbridge://' + message);
   } else if (isAndroid()){
-    UnityInAppBrowser.sendMessageFromJS(message);
+    
     console.log("in android");
   }
+  UnityInAppBrowser.sendMessageFromJS(message);
 console.log("funcion send message");
 }
 
