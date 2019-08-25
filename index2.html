@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <style>
+        body {
+            padding: 20pt;
+            background-color: #5179c4
+        }
+
+        .myButton {
+            background-color: #2e466e;
+            -moz-border-radius: 17px;
+            -webkit-border-radius: 17px;
+            border-radius: 17px;
+            border: 1px solid #1f2f47;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 15px;
+            padding: 16px 26px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #263666;
+        }
+
+        p,
+        h3 {
+            color: #FFF
+        }
+    </style>
+</head>
+
+<body>
+    <a class="myButton" onclick="insertar()">Click here to send a   "Ping" to
+        Unity</a>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <!-- <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script> -->
+    <!-- <script defer src="./init-firebase.js"></script> -->
+
+    <!-- script type="text/javascript" src="index.js"></script> -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCs7PUMT3SrA5fHc8h6KyS0Wv_cqrHVlmc",
+            authDomain: "arelektra-cb680.firebaseapp.com",
+            databaseURL: "https://arelektra-cb680.firebaseio.com",
+            projectId: "arelektra-cb680",
+            storageBucket: "",
+            messagingSenderId: "335620122141",
+            appId: "1:335620122141:web:593b4cbd15e04414"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        console.log(firebase);
+
+        var firestore = firebase.firestore();
+        const decRef = firestore.doc("/samples/objetos")
+
+        function insertar() {
+            decRef.set({
+                id: 1,
+                nombre: "Antena Plana Para Interiores Master TVANTFLATHD",
+                height: 27,
+                length: 50,
+                weight: 430,
+                price: "$199.00",
+                disponible: true
+            })
+                .then(() => {
+                    console.log("Guardado")
+                })
+                .catch(() => {
+                    console.log("hubo error")
+                })
+        }
+    </script>
+</body>
+
+</html>
