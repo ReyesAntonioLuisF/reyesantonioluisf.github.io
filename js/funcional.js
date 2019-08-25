@@ -44,6 +44,6 @@ function sendMessageToUnity(message) {
 
 function sendPing(cadena) {
   sendMessageToUnity("ping");
-  alert("va enviar cadena");
+  console.log("va enviar cadena");
 
 }
